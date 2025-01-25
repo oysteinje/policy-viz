@@ -17,4 +17,5 @@ RUN pip install --no-cache-dir \
     beautifulsoup4 \
     azure-identity \
     azure-mgmt-subscription \
-    azure-mgmt-resource
+    azure-mgmt-resource \
+    streamlit
