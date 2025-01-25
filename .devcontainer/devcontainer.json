@@ -1,0 +1,11 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "runArgs": [
+        "-p=5000:5000"
+    ],
+    "features": {
+      "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    }
+}
