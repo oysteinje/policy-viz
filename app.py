@@ -27,27 +27,7 @@ def get_policy_assignments(credential, subscription_id):
     """Get policy assignments for a subscription"""
     try:
         policy_client = PolicyClient(credential, subscription_id)
-        assignments = list(policy_client.policy_assignments.list())
-
-        # Get policy definitions for each assignment
-        for assignment in assignments:
-            if assignment.policy_definition_id:
-                try:
-                    definition = policy_client.policy_definitions.get_built_in(
-                        policy_definition_name=assignment.policy_definition_id.split('/')[-1]
-                    )
-                    assignment.policy_effect = definition.policy_rule.get('then', {}).get('effect', 'Unknown')
-                except:
-                    # If built-in policy fetch fails, try custom policy
-                    try:
-                        definition = policy_client.policy_definitions.get(
-                            policy_definition_name=assignment.policy_definition_id.split('/')[-1]
-                        )
-                        assignment.policy_effect = definition.policy_rule.get('then', {}).get('effect', 'Unknown')
-                    except:
-                        assignment.policy_effect = 'Unknown'
-
-        return assignments
+        return list(policy_client.policy_assignments.list())
     except Exception as e:
         st.error(f"Failed to fetch policy assignments: {str(e)}")
         return []
@@ -125,7 +105,6 @@ def main():
                             st.write(f"Name: {policy.name}")
                             if policy.description:
                                 st.write(f"Description: {policy.description}")
-                            st.write(f"Effect: {getattr(policy, 'policy_effect', 'Unknown')}")
                             if policy.scope:
                                 st.write(f"Scope: {policy.scope}")
 
