@@ -5,6 +5,8 @@ A streamlit application that helps you explore Azure Policies across your subscr
 - List policy assignments for each subscription
 - Display detailed policy information including parameters
 
+![Screenshot of the application](screenshot.png)
+
 ## Prerequisites
 
 - Python 3.x
