@@ -6,6 +6,7 @@ A streamlit application that helps you explore Azure Policies across your subscr
 - Display detailed policy information including parameters
 
 Screenshot:
+
 <kbd>![Screenshot of the application](screenshot.png)</kbd>
 
 ## Prerequisites
