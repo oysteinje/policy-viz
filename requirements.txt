@@ -1,0 +1,4 @@
+streamlit
+azure-identity
+azure-mgmt-subscription
+azure-mgmt-resource
