@@ -24,4 +24,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: qbitsno/policy-viz:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/policy-viz:latest
