@@ -24,4 +24,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: oysteinje/policy-viz:latest
+          tags: qbitsno/policy-viz:latest
