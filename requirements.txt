@@ -2,3 +2,4 @@ streamlit
 azure-identity
 azure-mgmt-subscription
 azure-mgmt-resource
+azure-mgmt-managementgroups
