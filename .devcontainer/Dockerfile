@@ -18,4 +18,5 @@ RUN pip install --no-cache-dir \
     azure-identity \
     azure-mgmt-subscription \
     azure-mgmt-resource \
+    azure-mgmt-managementgroups \
     streamlit
