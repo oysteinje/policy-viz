@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "policy-viz" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "policy-viz" ]
+    branches: [ "main" ]
 
 jobs:
   build-and-push:
